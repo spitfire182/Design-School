@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // default font size of a browser is 16px
+    // 10/16px = 62.5% ===> 1 rem is 10px
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    background-image: linear-gradient(to bottom, $color-blue-dark, $color-blue-light);
+
+    height: 200vh; //for tests only
+}

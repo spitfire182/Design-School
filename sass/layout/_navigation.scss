@@ -1,0 +1,122 @@
+.sidebar {
+    position: fixed;
+    top:0;
+    left:0;
+    color: $color-white;
+    background-color: transparent;
+    width: 20%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    &__author {
+        font-size: 1.8rem;
+        text-align: center;
+
+        &-photo {
+            border-radius: 50%;
+            width: 80%;
+            margin: 3rem 0;
+            box-shadow: $shadow-menu;
+        }
+
+        &-name {
+            font-weight: 700;
+        }
+
+        &-title {
+            line-height: 3rem;
+        }
+    }
+
+    &__nav {
+        margin-left: -1rem;
+
+        &-item {
+            list-style: none;
+        }
+
+        &-link:link,
+        &-link:visited {
+            color: $color-white;
+            text-decoration: none;
+            display: block;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        &-link:hover,
+        &-link:active {
+            color: $color-yellow;
+            transform: translateX(2rem);
+            animation: menu 1s;
+        }
+
+        &-link::after {
+            content: "\3009\3009";
+            margin-left: .7rem;
+            letter-spacing: -2px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        &-social-link {
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            box-shadow: $shadow-menu;
+            background-color: transparent;
+            transition: all .5s;
+
+            &:not(:first-child) {
+                margin-left: 1rem;
+            }
+        }
+
+        &-social-link:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    &::after {
+        content: "";
+        height: 100vh;
+        width: 1px;
+        background-image: linear-gradient(to bottom, $color-blue-dark, $color-blue-light);
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.sidebar__nav-social-icon.fab {
+    width: 3.2rem;
+    height: 3.2rem;
+    line-height: 3.2rem;
+    border-radius: 50%;
+}
+
+.fa-google-plus-g {
+    color: $color-white;
+    background-color: $color-google;
+}
+
+.fa-facebook {
+    color: $color-facebook;
+    background-color: $color-white;
+}
+
+.fa-dribbble {
+    color: $color-white;
+    background-color: $color-dribbble;
+}
+
+.fa-behance {
+    color: $color-white;
+    background-color: $color-behance;
+    
+}

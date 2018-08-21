@@ -1,0 +1,21 @@
+.container {
+
+}
+
+.hire-us {
+    position: fixed;
+    top: 0;
+    right: 20%;
+    color: black;
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+}
+
+.content {
+    margin-left: 20%;
+}

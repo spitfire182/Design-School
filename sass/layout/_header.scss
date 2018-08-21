@@ -1,0 +1,11 @@
+.header {
+    position: relative;
+    height: 100vh;
+
+    &__text {
+        position: absolute;
+        top: 50%;
+        right: 20%;
+        transform: rotate(90deg);
+    }
+}
