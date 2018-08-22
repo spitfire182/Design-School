@@ -57,25 +57,40 @@
 
     &:hover &__link {
         color: $color-blue;
-    }
-    
+    }    
 }
 
 .content {
     margin-left: 20%;
 }
 
-.section-portfolio {
-    padding: 6rem;
+.section-heading {
+    margin: 3rem 0;
 }
 
 .section-portfolio {
-    
+    padding: 3rem 6rem 6rem 6rem;
+
     .portfolio-box {
         display: flex;
-        justify-content: left;
+        justify-content: space-between;
+        justify-items: left;
         flex-wrap: wrap;
-        align-content: space-between;
+    }
+}
+
+.section-services,
+.section-skills {
+    padding: 6rem;
+}
+
+.section-services {
+
+    .services-box {
+        display: flex;
+        justify-content: space-between;
+        justify-items: left;
+        flex-wrap: wrap;
     }
 }
 

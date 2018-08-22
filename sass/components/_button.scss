@@ -54,4 +54,46 @@
             z-index: -1;
         }
     }
+
+    &-portfolio {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        &,
+        &:link,
+        &:visited {
+            font-size: 2rem;
+            line-height: 3rem;
+            text-align: center;
+            padding: 1rem;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 3px 0 0 0;
+            color: $color-black;
+            box-shadow: $shadow-portfolio;
+        }  
+        
+        &::before {
+            content: "";
+            width: 0;
+            height: 100%;
+            border-radius: 3px 0 0 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $color-blue;
+            color: $color-white;
+            transition: all .4s;
+        }
+
+        &:hover {
+            color: $color-white;
+        }
+
+        &:hover::before {
+            width: 100%;
+            z-index: -1;
+        }
+    }
 }
