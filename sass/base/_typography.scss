@@ -1,0 +1,22 @@
+.heading-primary {
+    font-size: 7rem;
+    line-height: 7rem;
+
+    &--top,
+    &--bot {
+        display: block;
+    }
+
+    &--bot {
+        font-weight: 100;
+    }
+}
+
+.header__text-paragraph {
+    display: inline-block;
+    font-size: 1.4rem;
+
+    &:not(:last-child) {
+        margin-right: 5rem;
+    }
+}

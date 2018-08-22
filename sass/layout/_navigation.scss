@@ -6,11 +6,47 @@
     background-color: transparent;
     width: 20%;
     height: 100vh;
+    transition: color .5s .3s;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 1px;
+        background-color: transparent;
+        //transform: scaleY(.1s);
+        transition: width .4s .2s, background-color 1s;
+        z-index: -5;
+    }
+
+    &:hover::before {
+        background-color: $color-white;
+        //transform: scaleY(1);
+        width: 100%;
+    }
+    
+    &:hover,
+    &:hover &__nav-link:link,
+    &:hover &__nav-link:visited {
+        color: $color-black;
+    }
+
+    &:hover &__nav-link:hover,
+    &:hover &__nav-link:active {
+        color: $color-blue;
+    }
+
+    &:hover .fa-facebook {
+        color: $color-white;
+        background-color: $color-facebook;
+    }
 
     &__author {
         font-size: 1.8rem;
@@ -21,6 +57,11 @@
             width: 80%;
             margin: 3rem 0;
             box-shadow: $shadow-menu;
+            transition: all .5s;
+        }
+
+        &-photo:hover {
+            transform: translateY(-5px);
         }
 
         &-name {
@@ -47,6 +88,7 @@
             padding: 2rem;
             display: flex;
             align-items: center;
+            transition: color .5s .3s;
         }
 
         &-link:hover,
@@ -86,10 +128,16 @@
         content: "";
         height: 100vh;
         width: 1px;
-        background-image: linear-gradient(to bottom, $color-blue-dark, $color-blue-light);
+        background-image: linear-gradient(to bottom, #350eb7, #290b96);
         position: absolute;
         top: 0;
         right: 0;
+        opacity: 1;
+        transition: all .5s .2s;
+    }
+
+    &:hover::after {
+        opacity: 0;
     }
 }
 
@@ -98,6 +146,7 @@
     height: 3.2rem;
     line-height: 3.2rem;
     border-radius: 50%;
+    transition: all 1s ease-out;
 }
 
 .fa-google-plus-g {
