@@ -94,3 +94,20 @@
     }
 }
 
+.section-skills {
+
+    .flexco {
+        display: flex;
+    }
+
+
+    .skills-box {
+        //height: 800px;
+        display: flex;
+        //justify-content: space-between;
+        justify-items: left;
+        flex-wrap: wrap;
+        flex: 0 0 50%;
+    }
+}
+

@@ -1,0 +1,30 @@
+.skill {
+    margin: 1.5rem 3rem 1.5rem 0;
+    padding-bottom: 3rem;
+    text-align: center;
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: 3px;
+    box-shadow: $shadow-menu;
+    transition: all .4s;
+    width: 44.7%;
+
+    &__photo {
+        padding: 5rem 0 3rem 0;
+    }
+
+    & .heading-ternary {
+        color: $color-blue;
+        font-weight: 400;
+    }
+
+    & .paragraph {
+        margin: 3rem 2rem;
+        font-size: 1.4rem;
+        color: $color-grey;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+}

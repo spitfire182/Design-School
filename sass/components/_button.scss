@@ -96,4 +96,31 @@
             z-index: -1;
         }
     }
+
+    &-inline {
+        &,
+        &:link,
+        &:visited {
+            color: $color-red;
+            font-weight: 400;
+            text-decoration: none;
+            padding: 0;
+            display: inline-block;
+            border-radius: none;
+            transition: all .4s;
+            font-size: 1.4rem;
+            border: none;
+        } 
+        
+        &::after {
+            content: "\3009";
+            margin-left: .5rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
 }

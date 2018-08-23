@@ -136,6 +136,55 @@ body {
     width: 100%;
     z-index: -1; }
 
+.btn-inline, .btn-inline:link, .btn-inline:visited {
+  color: #ee0808;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 0;
+  display: inline-block;
+  border-radius: none;
+  transition: all .4s;
+  font-size: 1.4rem;
+  border: none; }
+
+.btn-inline::after {
+  content: "\3009";
+  margin-left: .5rem;
+  font-size: 1.4rem;
+  font-weight: 700; }
+
+.btn-inline:hover {
+  box-shadow: none; }
+
+.clients {
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column; }
+  .clients__brands {
+    background-color: #ffffff;
+    border-radius: 3px 3px 0 0;
+    padding: 2rem;
+    height: 50%;
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap; }
+  .clients__testimonials {
+    background-color: #304ffe;
+    border-radius: 0 0 3px 3px;
+    height: 50%;
+    padding: 8rem; }
+    .clients__testimonials-quote {
+      background-color: #ffffff;
+      color: #4b4f5d;
+      border-radius: 4px;
+      padding: 2.5rem;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 400; }
+
 .portfolio {
   margin: 2.5rem 0;
   padding-bottom: 2rem;
@@ -197,6 +246,28 @@ body {
     font-size: 1.4rem;
     color: #4b4f5d; }
   .service:hover {
+    transform: translateY(-3px); }
+
+.skill {
+  margin: 1.5rem 3rem 1.5rem 0;
+  padding-bottom: 3rem;
+  text-align: center;
+  background-color: #ffffff;
+  color: #1f2126;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
+  transition: all .4s;
+  width: 44.7%; }
+  .skill__photo {
+    padding: 5rem 0 3rem 0; }
+  .skill .heading-ternary {
+    color: #304ffe;
+    font-weight: 400; }
+  .skill .paragraph {
+    margin: 3rem 2rem;
+    font-size: 1.4rem;
+    color: #4b4f5d; }
+  .skill:hover {
     transform: translateY(-3px); }
 
 .header {
@@ -421,3 +492,12 @@ body {
   justify-content: space-between;
   justify-items: left;
   flex-wrap: wrap; }
+
+.section-skills .flexco {
+  display: flex; }
+
+.section-skills .skills-box {
+  display: flex;
+  justify-items: left;
+  flex-wrap: wrap;
+  flex: 0 0 50%; }
