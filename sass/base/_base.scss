@@ -20,5 +20,7 @@ body {
     color: $color-white;
     background-image: linear-gradient(to bottom, $color-blue-dark, $color-blue-light);
 
-    //height: 800vh; //for tests only
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

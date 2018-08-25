@@ -1,5 +1,23 @@
 .container {
+    display: flex;
+    max-width: 160rem;
+    justify-self: center;
+    background-image: linear-gradient(to bottom, $color-blue-dark, $color-blue-light);
 
+    @include respond(big-desktop) {
+        box-shadow: 0 2rem 6rem rgba(0, 0, 0, .3);
+    }
+}
+
+.background {
+    position: fixed;
+    top: 28%;
+    left: 0;
+    width: 100vw;
+    height: 72vh;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,.25) 0%,rgba(255, 255, 255, 0) 100%) no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 .hire-us {
@@ -57,11 +75,16 @@
 
     &:hover &__link {
         color: $color-blue;
-    }    
+    }   
+    
+    @include respond(big-desktop) {
+        right: 50%;
+        transform: translateX(700px);
+    }
 }
 
 .content {
-    margin-left: 20%;
+    //margin-left: 20%;
 }
 
 .section-heading {
@@ -74,13 +97,14 @@
     .portfolio-box {
         display: flex;
         justify-content: space-between;
-        justify-items: left;
+        justify-items: center;
         flex-wrap: wrap;
     }
 }
 
 .section-services,
-.section-skills {
+.section-skills,
+.section-contact {
     padding: 6rem;
 }
 
@@ -96,10 +120,9 @@
 
 .section-skills {
 
-    .flexco {
+    .skills-container {
         display: flex;
     }
-
 
     .skills-box {
         //height: 800px;
@@ -115,3 +138,87 @@
     }
 }
 
+.section-contact {
+
+    .contact-box {
+        display: flex;        
+    }
+
+    .contact {
+        width: 30%;
+        background-color: $color-white;
+        border-radius: 5px;
+        margin-right: 3rem;
+
+        &__heading {
+            padding: 3rem;
+            color: $color-white;
+            background-color: $color-blue;
+            border-radius: 5px 5px 0 0;
+        }
+
+        &__details-box {
+            padding: 3rem;
+        }
+
+        &__details {
+            position: relative;
+            color: $color-black;
+            margin: 0 0 3rem 4rem;
+
+            &-icon {
+                position: absolute;
+                top: 0;
+                left: -5rem;
+                font-size: 3rem;
+                color: $color-blue;
+            }
+
+            & .paragraph {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__chat {
+            color: $color-black;
+            text-align: center;
+            box-shadow: $shadow-portfolio;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-text {
+                padding: 2rem;
+                font-size: 1.4rem;
+                
+                flex: 1;
+            }
+
+            &-btn {
+                position: relative;
+                background-color: $color-yellow-dark;
+                border-radius: 5px;
+                height: 9rem;
+                width: 9rem;                
+            }
+
+            &-icon {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, -2rem);
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .contact__map {
+        border-radius: 5px;
+        flex: 1;
+    }
+}
+
+.author {
+    margin: 1rem auto;
+    text-align: center;
+}

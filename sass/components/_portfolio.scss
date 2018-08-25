@@ -1,6 +1,7 @@
 .portfolio {
-    margin: 2.5rem 2.5rem 0 0;
+    margin: 2.5rem 0 0 0;
     padding-bottom: 2rem;
+    width: 23%;
     background-color: $color-white;
     color: $color-black;
     box-shadow: $shadow-menu;
@@ -9,10 +10,9 @@
     transition: all .4s;
 
     &__photo {
-        //width: 100%;
-        height: auto;
         transform: scale(1.05);
         transition: all .4s;
+        max-width: 100%;
     }
 
     &__text {
