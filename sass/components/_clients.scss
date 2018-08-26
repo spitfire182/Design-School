@@ -22,7 +22,11 @@
         flex-wrap: wrap;
 
         &-box {
-            
+            max-width: 30%;
+        }
+
+        &-photo {
+            width: 100%;
         }
     }
 

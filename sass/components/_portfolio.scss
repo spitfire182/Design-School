@@ -9,6 +9,10 @@
     overflow: hidden;
     transition: all .4s;
 
+    @include respond(medium) {
+        width: 33%;
+    }
+
     &__photo {
         transform: scale(1.05);
         transition: all .4s;

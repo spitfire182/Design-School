@@ -26,7 +26,7 @@ Order: base + typography + general layout + page layout + components
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };        //600px
     }
-    @if $breakpoint == lrgsss {
+    @if $breakpoint == medium {
         @media only screen and (max-width: 56.25em) { @content };          //900px
     }
     @if $breakpoint == lrg{

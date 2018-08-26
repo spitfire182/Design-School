@@ -8,6 +8,10 @@
     width: 22%;
     transition: all .4s;
 
+    @include respond(medium) {
+        width: 33%;
+    }
+
     &__photo {
         padding: 5rem 0 3rem 0;
     }

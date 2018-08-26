@@ -1,4 +1,6 @@
 .navigation {
+    z-index: 10;
+
     display: flex;
 
     &__checkbox {
@@ -97,6 +99,11 @@
         transform: rotate(-135deg);
         top: 0;
     } 
+
+    @include respond(lrg) {
+        position: fixed;
+        background-color: $color-white;
+    }
 }
 
 .sidebar {
@@ -200,6 +207,10 @@
             display: flex;
             align-items: center;
             transition: color .5s .3s;
+
+            @include respond(lrg) {
+                color: $color-black;
+            }
         }
 
         &-link:hover,
@@ -250,6 +261,11 @@
     &:hover::after {
         opacity: 0;
     }
+
+    @include respond(lrg) {
+        background-color: $color-white;
+        color: $color-black;
+    }
 }
 
 .sidebar__nav-social-icon.fab {
@@ -277,6 +293,5 @@
 
 .fa-behance {
     color: $color-white;
-    background-color: $color-behance;
-    
+    background-color: $color-behance;    
 }

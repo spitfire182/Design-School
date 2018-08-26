@@ -17,7 +17,7 @@
     height: 72vh;
     background: radial-gradient(ellipse at center, rgba(255,255,255,.25) 0%,rgba(255, 255, 255, 0) 100%) no-repeat;
     background-size: cover;
-    z-index: -1;
+    z-index: 1;
 }
 
 .hire-us {
@@ -84,7 +84,7 @@
 }
 
 .content {
-    //margin-left: 20%;
+    z-index: 2;
 }
 
 .section-heading {
@@ -122,6 +122,10 @@
 
     .skills-container {
         display: flex;
+
+        @include respond(medium) {
+            flex-direction: column;
+        }
     }
 
     .skills-box {
@@ -135,6 +139,10 @@
         align-content: stretch;
         height: 65rem;
         width: 49%;
+
+        @include respond(medium) {
+            width: 100%;
+        }
     }
 }
 
