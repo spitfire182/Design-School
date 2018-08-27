@@ -348,8 +348,9 @@ body {
   transition: all .4s;
   width: 44.7%;
   height: 48%; }
-  .skill:not(:last-child) {
-    margin-bottom: 3rem; }
+  @media only screen and (max-width: 62.5em) {
+    .skill:not(:last-child) {
+      margin-bottom: 3rem; } }
   @media only screen and (max-width: 31.25em) {
     .skill {
       width: 100%; } }

@@ -11,7 +11,9 @@
     height: 48%;
 
     &:not(:last-child) {
-        margin-bottom: 3rem;
+        @include respond(med) {
+            margin-bottom: 3rem;
+        }
     }
 
     @include respond(tiny) {
