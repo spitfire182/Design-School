@@ -7,7 +7,7 @@
     box-shadow: $shadow-menu;
     position: relative;
     overflow: hidden;
-    transition: all .4s;
+    transition: color .4s, opacity 1.5s;
 
     @include respond(med) {
         width: 33%;

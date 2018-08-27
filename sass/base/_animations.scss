@@ -29,3 +29,24 @@
         transform: scale(1);
     }
 }
+
+div[class*="js--portfolio-"],
+div[class*="js--service-"],
+div[class*="js--skill-"],
+.js--brands,
+.js--testimonials,
+.js--contact,
+.js--map {
+    opacity: 0;
+    animation-duration: 1.5s;    
+}
+
+div[class*="js--portfolio-"].animated,
+div[class*="js--service-"].animated,
+div[class*="js--skill-"].animated,
+.js--brands.animated,
+.js--testimonials.animated,
+.js--contact.animated,
+.js--map.animated {
+    opacity: 1;
+}

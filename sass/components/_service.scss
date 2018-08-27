@@ -6,7 +6,7 @@
     border-radius: 3px;
     box-shadow: $shadow-menu;
     width: 22%;
-    transition: all .4s;
+    transition: transform .4s, opacity 1.5s;
 
     @include respond(med) {
         width: 33%;

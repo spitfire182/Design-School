@@ -32,6 +32,25 @@ Order: base + typography + general layout + page layout + components
   100% {
     transform: scale(1); } }
 
+div[class*="js--portfolio-"],
+div[class*="js--service-"],
+div[class*="js--skill-"],
+.js--brands,
+.js--testimonials,
+.js--contact,
+.js--map {
+  opacity: 0;
+  animation-duration: 1.5s; }
+
+div[class*="js--portfolio-"].animated,
+div[class*="js--service-"].animated,
+div[class*="js--skill-"].animated,
+.js--brands.animated,
+.js--testimonials.animated,
+.js--contact.animated,
+.js--map.animated {
+  opacity: 1; }
+
 *,
 *::after,
 *::before {
@@ -278,7 +297,7 @@ body {
   box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
   position: relative;
   overflow: hidden;
-  transition: all .4s; }
+  transition: color .4s, opacity 1.5s; }
   @media only screen and (max-width: 62.5em) {
     .portfolio {
       width: 33%; } }
@@ -318,7 +337,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
   width: 22%;
-  transition: all .4s; }
+  transition: transform .4s, opacity 1.5s; }
   @media only screen and (max-width: 62.5em) {
     .service {
       width: 33%; } }
@@ -345,7 +364,7 @@ body {
   color: #1f2126;
   border-radius: 3px;
   box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
-  transition: all .4s;
+  transition: all 1.5s;
   width: 44.7%;
   height: 48%; }
   @media only screen and (max-width: 62.5em) {
