@@ -17,6 +17,10 @@
         top: 50%;
         left: 50%;       
 
+        @include respond(tiny) {
+            top: 110%;
+        }
+
         &-image {
             box-shadow: $shadow-menu;
             border-radius: 50%;     
@@ -38,6 +42,14 @@
         position: absolute;
         top: 0%;
         right: -10%;        
-        transform: rotate(90deg) translateX(50%);     
+        transform: rotate(90deg) translateX(50%);    
+        
+        @include respond(sm) {
+            right: -20%;
+        }
+
+        @include respond(tiny) {
+            display: none;
+        }
     }
 }

@@ -10,6 +10,14 @@
     width: 44.7%;
     height: 48%;
 
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+
+    @include respond(tiny) {
+        width: 100%;
+    }
+
     &__photo {
         padding: 5rem 0 3rem 0;
     }
@@ -27,5 +35,9 @@
 
     &:hover {
         transform: translateY(-3px);
+    }
+
+    @include respond(med) {
+        min-width: 48.5%;
     }
 }

@@ -23,11 +23,14 @@ Order: base + typography + general layout + page layout + components
 
 */
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };        //600px
+    @if $breakpoint == tiny {
+        @media only screen and (max-width: 31.25em) { @content };        //500px
     }
-    @if $breakpoint == medium {
-        @media only screen and (max-width: 56.25em) { @content };          //900px
+    @if $breakpoint == sm {
+        @media only screen and (max-width: 43.75em) { @content };        //700px
+    }
+    @if $breakpoint == med {
+        @media only screen and (max-width: 62.5em) { @content };       //1000px
     }
     @if $breakpoint == lrg{
         @media only screen and (max-width: 75em) { @content };         //1200px

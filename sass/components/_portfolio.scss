@@ -9,14 +9,18 @@
     overflow: hidden;
     transition: all .4s;
 
-    @include respond(medium) {
+    @include respond(med) {
         width: 33%;
+    }
+
+    @include respond(tiny) {
+        width: 100%;
     }
 
     &__photo {
         transform: scale(1.05);
         transition: all .4s;
-        max-width: 100%;
+        width: 100%;
     }
 
     &__text {

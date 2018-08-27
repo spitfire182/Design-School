@@ -33,6 +33,10 @@
     transition: all .4s ease-in;
     z-index: 20;
 
+    @include respond(med) {
+        display: none;
+    }
+
     &__link,
     &__link:link,
     &__link:visited {
@@ -94,11 +98,23 @@
 .section-portfolio {
     padding: 3rem 6rem 6rem 6rem;
 
+    @include respond(med) {
+        padding: 3rem;
+    }
+
+    @include respond(med) {
+        padding: 1rem;
+    }
+
     .portfolio-box {
         display: flex;
         justify-content: space-between;
         justify-items: center;
         flex-wrap: wrap;
+
+        @include respond(tiny) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -106,6 +122,14 @@
 .section-skills,
 .section-contact {
     padding: 6rem;
+
+    @include respond(med) {
+        padding: 3rem;
+    }
+
+    @include respond(sm) {
+        padding: 1rem;
+    }
 }
 
 .section-services {
@@ -115,6 +139,10 @@
         justify-content: space-between;
         justify-items: left;
         flex-wrap: wrap;
+
+        @include respond(tiny) {
+            flex-direction: column;
+        }
     }
 }
 
@@ -123,7 +151,7 @@
     .skills-container {
         display: flex;
 
-        @include respond(medium) {
+        @include respond(med) {
             flex-direction: column;
         }
     }
@@ -140,8 +168,14 @@
         height: 65rem;
         width: 49%;
 
-        @include respond(medium) {
+        @include respond(med) {
             width: 100%;
+            flex-direction: row;
+            align-content: space-between;
+        }
+
+        @include respond(tiny) {
+            height: auto;
         }
     }
 }
@@ -149,7 +183,11 @@
 .section-contact {
 
     .contact-box {
-        display: flex;        
+        display: flex;       
+        
+        @include respond(sm) {
+            flex-direction: column;
+        }
     }
 
     .contact {
@@ -157,6 +195,15 @@
         background-color: $color-white;
         border-radius: 5px;
         margin-right: 3rem;
+
+        @include respond(lrg) {
+            width: 50%;
+        }
+
+        @include respond(sm) {
+
+            width: 100%;
+        }
 
         &__heading {
             padding: 3rem;
@@ -167,6 +214,14 @@
 
         &__details-box {
             padding: 3rem;
+
+            @include respond(sm) {
+                text-align: center;
+            }
+
+            @include respond(tiny) {
+                text-align: left;
+            }
         }
 
         &__details {
@@ -180,6 +235,17 @@
                 left: -5rem;
                 font-size: 3rem;
                 color: $color-blue;
+
+                @include respond(sm) {
+                    left: 0;
+                }
+
+                @include respond(tiny) {
+                    left: -5rem;
+                }
+            }
+
+            &-text {
             }
 
             & .paragraph {
@@ -223,6 +289,10 @@
     .contact__map {
         border-radius: 5px;
         flex: 1;
+
+        @include respond(sm) {
+            margin-top: 3rem;
+        }
     }
 }
 

@@ -211,6 +211,15 @@ body {
     justify-items: center;
     justify-content: space-around;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 62.5em) {
+      .clients__brands {
+        margin-top: 3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column; } }
+    @media only screen and (max-width: 31.25em) {
+      .clients__brands {
+        flex-direction: row; } }
     .clients__brands-box {
       max-width: 30%; }
     .clients__brands-photo {
@@ -219,12 +228,15 @@ body {
     background-color: #304ffe;
     border-radius: 0 0 3px 3px;
     height: 50%;
-    padding: 5rem 6rem; }
+    padding: 4rem 5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .clients__testimonials {
+        padding: 3rem 1rem; } }
     .clients__testimonials-quote {
       background-color: #ffffff;
       color: #4b4f5d;
       border-radius: 4px;
-      padding: 2.5rem 3.5rem;
+      padding: 2rem 2rem;
       font-size: 1.5rem;
       font-style: italic;
       font-weight: 400;
@@ -267,13 +279,16 @@ body {
   position: relative;
   overflow: hidden;
   transition: all .4s; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 62.5em) {
     .portfolio {
       width: 33%; } }
+  @media only screen and (max-width: 31.25em) {
+    .portfolio {
+      width: 100%; } }
   .portfolio__photo {
     transform: scale(1.05);
     transition: all .4s;
-    max-width: 100%; }
+    width: 100%; }
   .portfolio__text {
     margin: 1.5rem;
     transition: all .4s; }
@@ -304,9 +319,12 @@ body {
   box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
   width: 22%;
   transition: all .4s; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 62.5em) {
     .service {
       width: 33%; } }
+  @media only screen and (max-width: 31.25em) {
+    .service {
+      width: 100%; } }
   .service__photo {
     padding: 5rem 0 3rem 0; }
   .service .heading-ternary {
@@ -330,6 +348,11 @@ body {
   transition: all .4s;
   width: 44.7%;
   height: 48%; }
+  .skill:not(:last-child) {
+    margin-bottom: 3rem; }
+  @media only screen and (max-width: 31.25em) {
+    .skill {
+      width: 100%; } }
   .skill__photo {
     padding: 5rem 0 3rem 0; }
   .skill .heading-ternary {
@@ -341,6 +364,9 @@ body {
     color: #4b4f5d; }
   .skill:hover {
     transform: translateY(-3px); }
+  @media only screen and (max-width: 62.5em) {
+    .skill {
+      min-width: 48.5%; } }
 
 .header {
   position: relative;
@@ -357,6 +383,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%; }
+    @media only screen and (max-width: 31.25em) {
+      .header__video {
+        top: 110%; } }
     .header__video-image {
       box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
       border-radius: 50%;
@@ -375,6 +404,12 @@ body {
     top: 0%;
     right: -10%;
     transform: rotate(90deg) translateX(50%); }
+    @media only screen and (max-width: 43.75em) {
+      .header__text {
+        right: -20%; } }
+    @media only screen and (max-width: 31.25em) {
+      .header__text {
+        display: none; } }
 
 .navigation {
   z-index: 10;
@@ -387,12 +422,12 @@ body {
       .navigation__button {
         display: block;
         background-color: #304ffe;
-        height: 6rem;
-        width: 6rem;
+        height: 5rem;
+        width: 5rem;
         border-radius: 50%;
         position: fixed;
-        top: 6rem;
-        left: 6rem;
+        top: 1rem;
+        left: 1rem;
         z-index: 9999;
         box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
         text-align: center;
@@ -402,17 +437,19 @@ body {
     @media only screen and (max-width: 75em) {
       .navigation .element {
         width: 0; } }
-  @media only screen and (max-width: 75em) {
-    .navigation__checkbox:checked ~ .sidebar {
-      display: flex; } }
+  .navigation__checkbox:checked ~ .sidebar {
+    left: 0; }
+    @media only screen and (max-width: 75em) {
+      .navigation__checkbox:checked ~ .sidebar {
+        display: flex; } }
   @media only screen and (max-width: 75em) {
     .navigation__checkbox:checked ~ .element {
       width: 20vw; } }
   .navigation__icon {
     position: relative;
-    margin-top: 2.8rem; }
+    margin-top: 2.6rem; }
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
-      width: 3rem;
+      width: 2rem;
       height: 2px;
       background-color: #ffffff;
       display: inline-block; }
@@ -450,7 +487,7 @@ body {
   background-color: transparent;
   width: 20%;
   height: 100vh;
-  transition: color .5s .3s;
+  transition: all .5s .3s;
   z-index: 999;
   display: flex;
   flex-direction: column;
@@ -462,7 +499,10 @@ body {
       transform: translateX(-800px); } }
   @media only screen and (max-width: 75em) {
     .sidebar {
-      display: none; } }
+      left: -50rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .sidebar {
+      left: -75rem; } }
   .sidebar::before {
     content: "";
     position: absolute;
@@ -516,6 +556,12 @@ body {
       @media only screen and (max-width: 75em) {
         .sidebar__nav-link:link, .sidebar__nav-link:visited {
           color: #1f2126; } }
+      @media only screen and (max-width: 62.5em) {
+        .sidebar__nav-link:link, .sidebar__nav-link:visited {
+          padding: 1.5rem; } }
+      @media only screen and (max-width: 43.75em) {
+        .sidebar__nav-link:link, .sidebar__nav-link:visited {
+          padding: 1rem; } }
     .sidebar__nav-link:hover, .sidebar__nav-link:active {
       color: #f6ff00;
       transform: translateX(2rem);
@@ -552,7 +598,14 @@ body {
   @media only screen and (max-width: 75em) {
     .sidebar {
       background-color: #ffffff;
-      color: #1f2126; } }
+      color: #1f2126;
+      width: 25%; } }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      width: 33%; } }
+  @media only screen and (max-width: 43.75em) {
+    .sidebar {
+      width: 100%; } }
 
 .sidebar__nav-social-icon.fab {
   width: 3.2rem;
@@ -568,6 +621,10 @@ body {
 .fa-facebook {
   color: #3b5998;
   background-color: #ffffff; }
+  @media only screen and (max-width: 75em) {
+    .fa-facebook {
+      color: #ffffff;
+      background-color: #3b5998; } }
 
 .fa-dribbble {
   color: #ffffff;
@@ -608,6 +665,9 @@ body {
   box-shadow: 0 2rem 4rem 0 rgba(31, 33, 38, 0.15);
   transition: all .4s ease-in;
   z-index: 20; }
+  @media only screen and (max-width: 62.5em) {
+    .hire-us {
+      display: none; } }
   .hire-us__link, .hire-us__link:link, .hire-us__link:visited {
     color: #ffffff;
     font-weight: 700;
@@ -653,26 +713,48 @@ body {
 
 .section-portfolio {
   padding: 3rem 6rem 6rem 6rem; }
+  @media only screen and (max-width: 62.5em) {
+    .section-portfolio {
+      padding: 3rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .section-portfolio {
+      padding: 1rem; } }
   .section-portfolio .portfolio-box {
     display: flex;
     justify-content: space-between;
     justify-items: center;
     flex-wrap: wrap; }
+    @media only screen and (max-width: 31.25em) {
+      .section-portfolio .portfolio-box {
+        flex-direction: column; } }
 
 .section-services,
 .section-skills,
 .section-contact {
   padding: 6rem; }
+  @media only screen and (max-width: 62.5em) {
+    .section-services,
+    .section-skills,
+    .section-contact {
+      padding: 3rem; } }
+  @media only screen and (max-width: 43.75em) {
+    .section-services,
+    .section-skills,
+    .section-contact {
+      padding: 1rem; } }
 
 .section-services .services-box {
   display: flex;
   justify-content: space-between;
   justify-items: left;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 31.25em) {
+    .section-services .services-box {
+      flex-direction: column; } }
 
 .section-skills .skills-container {
   display: flex; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 62.5em) {
     .section-skills .skills-container {
       flex-direction: column; } }
 
@@ -686,18 +768,32 @@ body {
   align-content: stretch;
   height: 65rem;
   width: 49%; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 62.5em) {
     .section-skills .skills-box {
-      width: 100%; } }
+      width: 100%;
+      flex-direction: row;
+      align-content: space-between; } }
+  @media only screen and (max-width: 31.25em) {
+    .section-skills .skills-box {
+      height: auto; } }
 
 .section-contact .contact-box {
   display: flex; }
+  @media only screen and (max-width: 43.75em) {
+    .section-contact .contact-box {
+      flex-direction: column; } }
 
 .section-contact .contact {
   width: 30%;
   background-color: #ffffff;
   border-radius: 5px;
   margin-right: 3rem; }
+  @media only screen and (max-width: 75em) {
+    .section-contact .contact {
+      width: 50%; } }
+  @media only screen and (max-width: 43.75em) {
+    .section-contact .contact {
+      width: 100%; } }
   .section-contact .contact__heading {
     padding: 3rem;
     color: #ffffff;
@@ -705,6 +801,12 @@ body {
     border-radius: 5px 5px 0 0; }
   .section-contact .contact__details-box {
     padding: 3rem; }
+    @media only screen and (max-width: 43.75em) {
+      .section-contact .contact__details-box {
+        text-align: center; } }
+    @media only screen and (max-width: 31.25em) {
+      .section-contact .contact__details-box {
+        text-align: left; } }
   .section-contact .contact__details {
     position: relative;
     color: #1f2126;
@@ -715,6 +817,12 @@ body {
       left: -5rem;
       font-size: 3rem;
       color: #304ffe; }
+      @media only screen and (max-width: 43.75em) {
+        .section-contact .contact__details-icon {
+          left: 0; } }
+      @media only screen and (max-width: 31.25em) {
+        .section-contact .contact__details-icon {
+          left: -5rem; } }
     .section-contact .contact__details .paragraph {
       font-size: 1.4rem; }
   .section-contact .contact__chat {
@@ -743,6 +851,9 @@ body {
 .section-contact .contact__map {
   border-radius: 5px;
   flex: 1; }
+  @media only screen and (max-width: 43.75em) {
+    .section-contact .contact__map {
+      margin-top: 3rem; } }
 
 .author {
   margin: 1rem auto;

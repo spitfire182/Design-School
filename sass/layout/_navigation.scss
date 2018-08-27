@@ -13,12 +13,12 @@
         @include respond(lrg) {
             display: block;
             background-color: $color-blue;
-            height: 6rem;
-            width: 6rem;
+            height: 5rem;
+            width: 5rem;
             border-radius: 50%;
             position: fixed;
-            top: 6rem;
-            left: 6rem;
+            top: 1rem;
+            left: 1rem;
             z-index: 9999;
             box-shadow: $shadow-menu;
             text-align: center;
@@ -36,6 +36,8 @@
 
     &__checkbox:checked ~ .sidebar {
 
+        left: 0;
+
         @include respond(lrg) {
             display: flex;
         }
@@ -50,12 +52,12 @@
 
     &__icon {
         position: relative;
-        margin-top: 2.8rem;
+        margin-top: 2.6rem;
 
         &,
         &::before,
         &::after {
-            width: 3rem;
+            width: 2rem;
             height: 2px;
             background-color: $color-white;
             display: inline-block;
@@ -114,7 +116,7 @@
     background-color: transparent;
     width: 20%;
     height: 100vh;
-    transition: color .5s .3s;
+    transition: all .5s .3s;
     z-index: 999;
 
     display: flex;
@@ -128,7 +130,13 @@
     }
 
     @include respond(lrg) {
-        display: none;
+        //display: none;
+        //opacity: 0;
+        left: -50rem;
+    }
+
+    @include respond(sm) {
+        left: -75rem;
     }
 
     &::before {
@@ -211,6 +219,14 @@
             @include respond(lrg) {
                 color: $color-black;
             }
+
+            @include respond(med) {
+               padding: 1.5rem;
+            }
+
+            @include respond(sm) {
+                padding: 1rem;
+            }
         }
 
         &-link:hover,
@@ -265,6 +281,15 @@
     @include respond(lrg) {
         background-color: $color-white;
         color: $color-black;
+        width: 25%;
+    }
+
+    @include respond(med) {
+        width: 33%;
+    }
+
+    @include respond(sm) {
+        width: 100%;
     }
 }
 
@@ -284,6 +309,11 @@
 .fa-facebook {
     color: $color-facebook;
     background-color: $color-white;
+
+    @include respond(lrg) {
+        color: $color-white;
+        background-color: $color-facebook;
+    }
 }
 
 .fa-dribbble {
