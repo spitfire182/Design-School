@@ -162,10 +162,4 @@ $(document).ready(function () {
     }, {
         offset: '50%'
     });
-    
-    $('.js--map').waypoint(function (direction) {
-        $('.js--map').addClass('animated pulse');
-    }, {
-        offset: '0%'
-    });
 });
